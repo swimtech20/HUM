@@ -1,0 +1,50 @@
+body {
+	height: 100%;
+	width: 100%;
+	margin: 2px;
+}
+
+nav {
+	display: block;
+	box-sizing: border-box;
+	width: 150px;
+	border: 1 px solid black;
+}
+
+div.nav, div.container {
+	border: 2px dotted black;
+	padding: 5px 10px 5px 10px;
+	margin-left: 150px;
+	position: relative;
+	top: 10px;
+	float: left;
+	display: block;
+}
+h1{
+	padding: 5px;
+	margin: 10px;
+	border: 1px black;
+	color: blue;
+}
+
+div.body1{
+	padding: 5px 10px 5px 10px;
+	text-align: justify;
+	float: right;
+	color: teal;
+	border: 1 px solid black;
+}
+div.body2{
+	padding: 5px 10px 5px 10px;
+	text-align: justify;
+	float: right;
+	color: red;
+	border: 1 px solid black;
+}
+div.body3{
+	padding: 5px 10px 5px 10px;
+	text-align: justify;
+	float: right;
+	color: pink;
+	border: 1 px solid black;
+}

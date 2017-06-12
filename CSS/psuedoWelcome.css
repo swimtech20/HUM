@@ -1,0 +1,81 @@
+#layout,
+#menu,
+.menu-link {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+/*
+This is the parent `<div>` that contains the menu and the content area.
+*/
+#layout {
+    position: relative;
+    display: grid;
+    padding-left: 0;
+    background-color: white;
+}
+    #layout.active #menu {
+        left: 150px;
+        width: 150px;
+    }
+
+    #layout.active .menu-link {
+        left: 150px;
+    }
+
+    .header {
+         margin: 0;
+         color: black;
+         text-align: center;
+         padding: 2.5em 2em 0;
+         border-bottom: 1px solid #eee;
+         background-color: white;
+     }
+        .header h1 {
+            margin: 0.2em 0;
+            font-size: 3em;
+            font-weight: 300;
+        }
+         .header h2 {
+            font-weight: 300;
+            color: #888888;
+            padding: 0;
+            margin-top: 0;
+        }
+        .header h4 {
+           font-weight: 300;
+           color: #888888;
+           padding: 0;
+           margin-top: 0;
+           font-size: 1.5em;
+       }
+
+@media (min-width: 48em) {
+  #layout {
+      padding-left: 0px; /* left col width "#menu" */
+      left: 0;
+  }
+  #layout.active .menu-link {
+      left: 150px;
+  }
+}
+
+@media (max-width: 48em) {
+    /* Only apply this when the window is small. Otherwise, the following
+    case results in extra padding on the left:
+        * Make the window small.
+        * Tap the menu to trigger the active state.
+        * Make the window large again.
+    */
+    #layout.active {
+        position: relative;
+        left: 150px;
+    }
+}
+
+div.container {
+  margin-left: 20px;
+}

@@ -1,0 +1,235 @@
+body {
+    color: white;
+}
+
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+Add transition to containers so they can push in and out.
+*/
+#layout,
+#menu,
+.menu-link {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+/*
+This is the parent `<div>` that contains the menu and the content area.
+*/
+#layout {
+    position: relative;
+    display: grid;
+    padding-left: 0;
+}
+    #layout.active #menu {
+        left: 150px;
+        width: 150px;
+    }
+
+    #layout.active .menu-link {
+        left: 150px;
+    }
+/*
+The content `<div>` is where all your content goes.
+*/
+.content {
+    position: relative;
+    top: 0 auto;
+    margin: 10px 0 16px 40px;
+    padding: 0 2em;
+    max-width: 800px;
+    margin-bottom: 50px;
+    line-height: 1.6em;
+}
+
+.header {
+     margin: 0;
+     color: #333;
+     text-align: center;
+     padding: 2.5em 2em 0;
+     border-bottom: 1px solid #eee;
+ }
+    .header h1 {
+        margin: 0.2em 0;
+        font-size: 3em;
+        font-weight: 300;
+    }
+     .header h2 {
+        font-weight: 300;
+        color: #888888;
+        padding: 0;
+        margin-top: 0;
+    }
+    .header h4 {
+       font-weight: 300;
+       color: #888888;
+       padding: 0;
+       margin-top: 0;
+       font-size: 1.5em;
+   }
+
+.content-subhead {
+    margin: 50px 0 20px 0;
+    font-weight: 300;
+    color: #888;
+}
+
+.content-subhead2 {
+    margin: 40px 0 16px 0;
+    width: 200px;
+    font-weight: 200;
+    color: #888888;
+}
+
+div.houseinfo {
+  margin: 20px 0 16px 20px;
+  width: 10%;
+  min-width: 150px;
+  margin-bottom: 50px;
+  line-height: 1.42857143;
+}
+
+div.container {
+  margin-left: 20px;
+}
+
+.col-md-4{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .col-md-4{
+    float: left;
+    width: 33.33333333%;
+  }
+
+div.phpinfo {
+  text-align: left;
+  margin-left: 20px;
+  font-size: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.42857143;
+}
+
+@media (max-width: 48em) {
+    /* Only apply this when the window is small. Otherwise, the following
+    case results in extra padding on the left:
+        * Make the window small.
+        * Tap the menu to trigger the active state.
+        * Make the window large again.
+    */
+    #layout.active {
+        position: relative;
+        left: 150px;
+    }
+}
+
+/*this is for further customization of php printed text (specifically for welcome.php)*/
+strong {
+
+}
+/*html, body {
+  height: 100%;
+}*/
+
+.navbar-toggle {
+  margin-top: 50px;
+  float: left;
+  margin-left: 15px;
+}
+
+.navmenu {
+  margin-top: 50px;
+  z-index: 1;
+}
+
+.canvas {
+  position: relative;
+  left: 0;
+  z-index: 2;
+  min-height: 100%;
+  padding: 50px 0 0 0;
+  background: #fff;
+}
+
+@media (min-width: 0) {
+  .navbar-toggle {
+    display: block; /* force showing the toggle */
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding: 0;
+  }
+  .navbar {
+    margin-top: 0px;
+    right: auto;
+    background: none;
+    border: none;
+  }
+  .canvas {
+    padding: 0;
+  }
+}
+
+@media (max-width: 550px) {
+    .big-container {
+    display: none;
+    }
+}
+@media (min-width: 550px) {
+    .small-container {
+    display: none;
+    }
+}
+/* Responsive iFrame */
+.responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+.responsive-iframe-container iframe,
+.vresponsive-iframe-container object,
+.vresponsive-iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.agenda {  }
+/* Dates */
+.agenda .agenda-date { width: 170px; }
+.agenda .agenda-date .dayofmonth {
+width: 40px;
+font-size: 36px;
+line-height: 36px;
+float: left;
+text-align: right;
+margin-right: 10px;
+}
+.agenda .agenda-date .shortdate {
+font-size: 0.75em;
+}
+/* Times */
+.agenda .agenda-time { width: 140px; }
+/* Events */
+.agenda .agenda-events {  }
+.agenda .agenda-events .agenda-event {  }
+
+@media (max-width: 767px) {
+
+}
